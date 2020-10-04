@@ -710,6 +710,14 @@ var Mouse = require('../core/Mouse');
                     }
                 }
 
+		if (part.text) {
+		    c.font = part.text_font || "12px Arial";
+                    c.fillStyle = part.text_style || 'rgba(255,255,255,0.5)';
+		    c.textAlign = "center";
+		    c.textBaseline = "middle";
+                    c.fillText(part.text, part.position.x, part.position.y);
+		}
+
                 c.globalAlpha = 1;
             }
         }
